@@ -1,0 +1,18 @@
+  <table>
+          <?php
+          if(isset($_POST["DataKhoa"])){
+             $kq=$_POST["DataKhoa"];
+             $kq = json_decode($kq,true);
+             print_r($kq);
+                
+          foreach($kq as $item=>$r){
+              echo $r["id"] ."<br>";
+              echo $r["Name"] ."<br>";
+              echo $r["Phone"] ."<br>";
+          }
+             } else{
+                echo  "fail";
+          }
+         
+          ?>
+      </table>

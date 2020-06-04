@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="datlich">
+      <div class="form-group row container-fluid">
+        <div class="col-4 mx-auto">
+          <h2 class="" style="text-align: center;">Đặt lịch</h2>
+          <label for="">Chọn ngày (Hôm nay hoặc mai) :</label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            class="form-control"
+            width="300px"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="form-group row moctime">
+        <h4 class="col-12 center">Buổi sáng</h4>
+        <br />
+        <button
+          class="col time btn btn-primary p-2 m-2 btn-outline-none"
+          disabled
+          id="1"
+          value="7h-8h"
+        >
+          7h-8h <br />
+          <span>Đã đặt</span>
+        </button>
+        <button
+          class="col time btn btn-primary p-2 m-2 btn-outline-none"
+          id="2"
+          value="8h-9h"
+        >
+          8h-9h <br />
+          <span>Còn trống</span>
+        </button>
+        <button
+          class="col time btn btn-primary p-2 m-2 btn-outline-none"
+          id="3"
+          value="9h-10h"
+        >
+          9h-10h <br />
+          <span>Còn trống</span>
+        </button>
+      </div>
+
+      <div class="col-1 mx-auto">
+        <button id="btnSave" class="btn btn-success">
+          Save
+        </button>
+      </div>
+    </div>
+
+    <div class="d-flex">
+      abc
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var data_date;
+      var data_time;
+
+      var date = document.getElementById("date");
+      var moc_time = document.getElementsByClassName("time");
+      for (var i in moc_time) {
+        moc_time[i].onclick = function () {
+          console.log(this.id);
+          data_date = this.value;
+          console.log(data_date);
+          data_time = date.value;
+          console.log(data_time);
+        };
+      }
+
+      var btnSave = document.getElementById("btnSave");
+      btnSave.onclick = function () {};
+
+      $("#btnSave").on("click", function () {
+        if (!date.checkValidity()) {
+          alert("Bạn chưa chọn ngày");
+          return;
+        }
+
+        $.load("datlich.php", { data_time: data_time, data_date: data_date });
+      });
+    </script>
+  </body>
+</html>
