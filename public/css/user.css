@@ -342,14 +342,15 @@ table tr th {
 #datlich .moctime button:active,
 #datlich .moctime button:hover,
 #datlich .moctime button:visited {
-  outline: none;
-  border: none;
+  border-color: #fa8043;
+  outline-color: #fa8043;
 }
 #datlich .moctime button:focus {
   box-shadow: 0 0 0 0.2rem #fa8043;
   background-color: #fa8043;
-  outline: none;
-  border: none;
+
+  border-color: #fa8043;
+  outline-color: #fa8043;
 }
 #datlich .chuyennganh input {
   width: 20px;

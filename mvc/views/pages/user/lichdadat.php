@@ -101,7 +101,7 @@
                      <!-- Modal Header -->
                      <div class='modal-header'>
                         <div>
-                           <h2 class='modal-title'>Nhập thông tin giảng viên</h2>
+                           <h2 class='modal-title'>Nhập thông tin</h2>
                            <span>(*) Yêu cầu thông tin chính xác</span>
                         </div>
 
@@ -115,7 +115,7 @@
 
                            <div class='col-3'>
 
-                              <label for=''>Mã giảng viên :</label>
+                              <label for=''>Mã số:</label>
                               <input class='form-control mb-3' type='text'>
                               <label for=''>Số điện thoại :</label>
                               <input class='form-control mb-3' type='number'>

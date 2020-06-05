@@ -77,6 +77,25 @@ class  User extends Controller{
         "listkhoa"=>$kq
     ]);
     }
+
+       public function nguoidungdatlich(){
+        $id_user= $_POST['id_user'];
+        
+        $id_department= $_POST['id_department'];
+        $id_doctor = $_POST['id_doctor'];
+        $id_speciality= $_POST['id_speciality'];
+        
+        $data_date= $_POST['data_date'];
+        $data_time = $_POST['data_time'];
+
+        foreach ( $id_speciality as $key){
+           $kq= $this->ModelUser->insertOrder($id_department,$id_doctor,$id_user,$key,$data_date,$data_time);
+        }
+       
+        echo "Đặt lịch thành công"; 
+    }
+
+
     // lich da dat
   public function lichdadat(){
     $this->view("UserManage",[

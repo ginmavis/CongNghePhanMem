@@ -68,8 +68,18 @@ class UserModel extends DB{
             ,"data" => $data];
              
         return json_encode($data1);
+    }
 
-       
+    
+  public function insertOrder($id_department,$id_doctor,$id_user,$key,$data_date,$data_time){
+        $rand = uniqid('',true);
+        
+        $qr="
+        INSERT INTO `orders` (`id`, `id_department`, `id_doctor`, `id_user`, `id_speciality`, `code`, `date`, `time`, `Note`) 
+        VALUES (NULL, '$id_department', '$id_doctor', '$id_user', '$key', '$rand', '$data_date', '$data_time', '')";
+
+        $kq=mysqli_query($this->con,$qr);
+        return $qr;
     }
  
 }
