@@ -220,67 +220,16 @@ body {
   width: 100%;
 }
 
-.content1 {
-  background-color: white;
-  margin: 0 1%;
-  padding: 10px 0 10px 0;
-}
-
-.content1 .header div {
-  margin: 0 10px;
-  text-align: center;
-}
-
-.content1 .header div h4 {
-  font-size: 35px;
-}
-
-.content1 .header div span {
-  font-size: 20px;
-  opacity: 0.9;
-}
-
-.content1 .header div select {
-  width: 20%;
-}
-
 .fa-plus-circle,
 .fa-download {
   font-size: 25px;
   vertical-align: middle;
 }
 
-.content1 .header div button {
-  margin: 0 2px;
-  padding: 2px 5px;
-}
-
 /* modals */
 
 .modal .modal-header {
   font-size: 1.2rem;
-}
-
-/* .table */
-
-table thead tr th {
-  font-size: 1rem;
-}
-
-table tr td {
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-table tr {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-table tr td,
-table tr th {
-  border-left: 0.5px solid rgba(1, 1, 1, 0.1);
-  border-right: 0.5px solid rgba(1, 1, 1, 0.1);
 }
 
 .fa-edit {
@@ -375,6 +324,33 @@ table tr th {
   font-size: 35px !important;
 }
 
-#doimk .form {
-  /* display: flex; */
+/*  */
+
+/* lịch đã đặt */
+#lichdadat .title .icon {
+  margin: 0 2px;
+  padding: 3px 5px;
+} /*  */
+
+#lichdadat .title hr {
+  width: 20%;
+  border: 1px solid #2980b9;
+  background-color: #2980b9;
+}
+#lichdadat .main .table thead th {
+  vertical-align: middle !important;
+  border-bottom: 2px solid #dee2e6;
+  border-left: 0.5px solid rgba(1, 1, 1, 0.1);
+  border-right: 0.5px solid rgba(1, 1, 1, 0.1);
+  text-align: center;
+}
+#lichdadat .main .table td {
+  padding: 0.5rem 0.3rem !important;
+  vertical-align: middle !important;
+  border-top: 1px solid #dee2e6;
+  border-left: 0.5px solid rgba(1, 1, 1, 0.1);
+  border-right: 0.5px solid rgba(1, 1, 1, 0.1);
+  border-bottom: 0.5px solid rgba(1, 1, 1, 0.1);
+  /* text-transform: lowercase; */
+  text-align: center;
 }

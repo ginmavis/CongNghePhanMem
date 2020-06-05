@@ -98,10 +98,26 @@ class  User extends Controller{
 
     // lich da dat
   public function lichdadat(){
+      $kq = $this->ModelUser->lichdadat();
     $this->view("UserManage",[
-        "page"=>"lichdadat"
+        "page"=>"lichdadat",
+        "lichdadat"=>$kq
     ]);
     }
+
+    
+    public function lichdadat_search_date(){
+     
+        $date = $_POST['date'];
+        $kq = $this->ModelUser->lichdadat_check_date($date);
+        echo $kq;
+    }
+    public function lichdadat_remove(){
+        $id = $_POST['id_remove'];
+        $kq = $this->ModelUser->lichdadat_remove($id);
+        echo $kq;
+    }
+// 
     //lich su kham
       public function lichsukham(){
     $this->view("UserManage",[
@@ -125,6 +141,7 @@ class  User extends Controller{
             echo "Đổi mật khẩu thất bại";        }
   
     }
+    // 
 
 }
 

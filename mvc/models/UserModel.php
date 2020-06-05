@@ -23,6 +23,18 @@ class UserModel extends DB{
         }
         return json_encode($arr);
     }
+    // getlist 1 dieu kien 
+    public function GetList_1dk($dbname,$stm,$data){
+        $qr = "SELECT * from $dbname where $stm='$data'" ;
+        
+        $result = mysqli_query($this->con,$qr);
+        $arr = array();
+        while($row = mysqli_fetch_array($result)){
+            $arr[] = $row;
+        }
+        return json_encode($arr);
+    }
+
 
     
     public function AddUser($name,$birth,$email,$address,$phone,$password){
@@ -90,7 +102,47 @@ class UserModel extends DB{
         $qr=mysqli_query($this->con,$qr);
         return $qr;
     }
-
+        // lich da dat
+    public function lichdadat(){
+        $arr = array();
+        $qr="SELECT orders.id as ID,users.Fullname as nameUser ,doctor.Name as nameDoctor ,department.Name as nameDepartment ,
+        speciality.Name as nameSpeciality ,speciality.Price as cost ,orders.date as ngaykham,orders.time as khunggio,orders.code as code
+            FROM `orders` JOIN `users` on orders.id_user=users.id  
+            JOIN `department` on orders.id_department = department.id
+            JOIN `speciality` on orders.id_speciality =speciality.id
+            JOIN `doctor` on orders.id_doctor=doctor.id";
+                    
+        $result=mysqli_query($this->con,$qr);
+        while($row = mysqli_fetch_array($result)){
+            $arr[] =  $row;
+        }
+        return  json_encode($arr);
+    }
+    // check date    
+    public function lichdadat_check_date($date){
+        $arr = array();
+        $qr="SELECT orders.id as ID,users.Fullname as nameUser ,doctor.Name as nameDoctor ,department.Name as nameDepartment ,
+        speciality.Name as nameSpeciality ,speciality.Price as cost ,orders.date as ngaykham,orders.time as khunggio,orders.code as code
+            FROM `orders` JOIN `users` on orders.id_user=users.id  
+            JOIN `department` on orders.id_department = department.id
+            JOIN `speciality` on orders.id_speciality =speciality.id
+            JOIN `doctor` on orders.id_doctor=doctor.id
+            WHERE orders.date='$date'
+            ";
+    
+        $result=mysqli_query($this->con,$qr);
+        while($row = mysqli_fetch_array($result)){
+            $arr[] =  $row;
+        }
+        return  json_encode($arr);
+       
+    }
+     public function lichdadat_remove($id){
+            $qr="DELETE FROM orders WHERE id='$id'";
+        $kq = mysqli_query($this->con,$qr);
+            return $kq;
+        }
+// 
 
  
 }

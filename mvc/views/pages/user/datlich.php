@@ -19,7 +19,7 @@ $data1=  $_SESSION['UserData'];
  
         </h2>
           
-          <label for="">Chọn ngày (Hôm nay hoặc mai) :</label>
+          <label  for="">Chọn ngày (Hôm nay hoặc mai) :</label>
           <form action="" method="post">
           <div class="d-flex">
           <input
@@ -37,6 +37,7 @@ $data1=  $_SESSION['UserData'];
           <button type="submit" name="btnChoseDate" class="col-2 mx-3 btn btn-success">
             Xem lịch
           </button>
+          </div>
         </form>
         </div>
         
