@@ -51,13 +51,13 @@
                                 <div class="row ">
                                     <div class="col ">
                                         <label for=" ">Mật khẩu:</label>
-                                        <input type="password" id="pass" value="<?= $pass?>"   class="form-control ">
+                                        <input type="password" id="pass" value="<?= $pass?>"   class="form-control " disabled>
 
 
                                     </div>
                                     <div class="col ">
                                         <label for=" ">Số điện thoại:</label>
-                                        <input type="number" value="<?=$data['Phone']?>" class="form-control mb-2 ">
+                                        <input type="number" value="<?=$data['Phone']?>" class="form-control mb-2 " disabled >
 
 
                                     </div>
@@ -75,7 +75,7 @@
                         <label for=" ">Địa chỉ : </label>
                         <textarea class="form-control is-valid "  placeholder="" rows="3 " id="comment "><?=$data['Address']?></textarea>
                         <div class="row " style="justify-content: center; ">
-                            <button class="btn btn-primary btn-lg mt-3 "> <i class="fa fa-check-circle-o "></i>  Save</button>
+                            <button class="btn btn-primary mt-3 "> <i class="fa fa-check-circle-o "></i>  Save</button>
                         </div>
 
                     </div>

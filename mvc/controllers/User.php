@@ -114,7 +114,17 @@ class  User extends Controller{
         "page"=>"doimk"
     ]);
     }
- 
+    public function changePass(){
+        $id_user = $_POST['id'];
+        $newPass = $_POST['newPass'];
+        $kq = $this->ModelUser->doimk($id_user,$newPass);
+        if($kq){
+          echo "Đổi mật khẩu thành công";  
+        }
+        else{
+            echo "Đổi mật khẩu thất bại";        }
+  
+    }
 
 }
 

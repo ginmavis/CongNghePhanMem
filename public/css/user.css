@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+
 * {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -359,4 +361,20 @@ table tr th {
 }
 #datlich .chuyennganh .form-check label {
   font-size: 17px;
+}
+#datlich .choseDate h2 {
+  font-size: 35px !important;
+}
+#datlich .choseDate .icon {
+  margin: 0 2px;
+  padding: 3px 5px;
+}
+
+/* doi mk */
+#doimk .title h2 {
+  font-size: 35px !important;
+}
+
+#doimk .form {
+  /* display: flex; */
 }

@@ -71,7 +71,7 @@ class UserModel extends DB{
     }
 
     
-  public function insertOrder($id_department,$id_doctor,$id_user,$key,$data_date,$data_time){
+    public function insertOrder($id_department,$id_doctor,$id_user,$key,$data_date,$data_time){
         $rand = uniqid('',true);
         
         $qr="
@@ -79,8 +79,19 @@ class UserModel extends DB{
         VALUES (NULL, '$id_department', '$id_doctor', '$id_user', '$key', '$rand', '$data_date', '$data_time', '')";
 
         $kq=mysqli_query($this->con,$qr);
+        return $kq;
+
+}
+    public function doimk($id,$password){
+      $password = password_hash($password,PASSWORD_DEFAULT);
+        $qr="
+        update users set Password = '$password' where id='$id' 
+        ";
+        $qr=mysqli_query($this->con,$qr);
         return $qr;
     }
+
+
  
 }
 ?>

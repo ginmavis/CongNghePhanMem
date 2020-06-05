@@ -5,13 +5,20 @@ $MaxDate = date('Y-m-d',$TwoDay);
 $DateNow = date('Y-m-d');
 $data1=  $_SESSION['UserData'];
 ?>
- <div id="datlich">
+ <div id="datlich" class="pt-2">
    
   <div class="form-group  container-fluid">
 <!-- chọn ngày -->
 <div class="row">
  <div class="col-5 choseDate mx-auto">
-          <h2 class="" style="text-align: center;">Đặt lịch</h2>
+          <h2 class="" style="text-align: center;">Đặt lịch 
+
+        <button class='btn btn-success icon' data-toggle='modal' data-target='#addnew'><i class='fa fa-plus-circle'></i></button>
+        <button class='btn btn-primary icon'> <i class='	fa fa-download'></i></button>
+
+ 
+        </h2>
+          
           <label for="">Chọn ngày (Hôm nay hoặc mai) :</label>
           <form action="" method="post">
           <div class="d-flex">
@@ -90,7 +97,7 @@ if($r= mysqli_num_rows($result)>0){
 // 7h-8h
 if($am7_8){
   echo'<button
-          class="col time btn btn-primary p-2 m-2 btn-outline-none"
+          class="col time btn btn-info p-2 m-2 btn-outline-none"
           disabled
           id="time0"
           value="7h-8h"
@@ -112,7 +119,7 @@ if($am7_8){
 // 8h-9h
 if($am8_9){
   echo'  <button
-          class="col time btn btn-primary p-2 m-2 btn-outline-none"
+          class="col time btn btn-info p-2 m-2 btn-outline-none"
           id="time1"
           value="8h-9h"
           disabled
@@ -133,7 +140,7 @@ if($am8_9){
 //9-10h
 if($am9_10){
    echo' <button
-          class="col time btn btn-primary p-2 m-2 btn-outline-none"
+          class="col time btn btn-info p-2 m-2 btn-outline-none"
           id="time2"
           value="9h-10h"
           disabled
@@ -154,7 +161,7 @@ if($am9_10){
 // 10-11h
 if($am10_11){
    echo' <button
-          class="col time btn btn-primary p-2 m-2 btn-outline-none"
+          class="col time btn btn-info p-2 m-2 btn-outline-none"
           id="time2"
           value="10h-11h"
           disabled
@@ -177,7 +184,7 @@ if($am10_11){
 // 11-12h
 if($am11_12){
    echo' <button
-          class="col time btn btn-primary p-2 m-2 btn-outline-none"
+          class="col time btn btn-info p-2 m-2 btn-outline-none"
           id="time2"
           value="11h-12h"
           disabled
@@ -201,7 +208,7 @@ if($am11_12){
 // 12-13h
 if($pm12_13){
    echo' <button
-          class="col time btn btn-primary p-2 m-2 btn-outline-none"
+          class="col time btn btn-info p-2 m-2 btn-outline-none"
           id="time2"
           value="12h-13h"
           disabled
@@ -222,7 +229,7 @@ if($pm12_13){
 // 13-14h
 if($pm13_14){
    echo' <button
-          class="col time btn btn-primary p-2 m-2 btn-outline-none"
+          class="col time btn btn-info p-2 m-2 btn-outline-none"
           id="time2"
           value="13h-14h"
           disabled
@@ -243,7 +250,7 @@ if($pm13_14){
 // 14-15h
 if($pm14_15){
    echo' <button
-          class="col time btn btn-primary p-2 m-2 btn-outline-none"
+          class="col time btn btn-info p-2 m-2 btn-outline-none"
           id="time2"
           value="14h-15h"
           disabled
@@ -264,7 +271,7 @@ if($pm14_15){
 //15-16h
 if($pm15_16){
    echo' <button
-          class="col time btn btn-primary p-2 m-2 btn-outline-none"
+          class="col time btn btn-info p-2 m-2 btn-outline-none"
           id="time2"
           value="15h-16h"
           disabled
@@ -285,7 +292,7 @@ if($pm15_16){
 // 16-17h
 if($pm16_17){
    echo' <button
-          class="col time btn btn-primary p-2 m-2 btn-outline-none"
+          class="col time btn btn-info p-2 m-2 btn-outline-none"
           id="time2"
           value="16h-17h"
           disabled
