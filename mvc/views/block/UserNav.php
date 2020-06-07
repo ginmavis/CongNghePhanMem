@@ -25,7 +25,7 @@
       <div class="collapse navbar-collapse  " id="navbarSupportedContent">
          <ul class="navbar-nav  ml-auto">
             <li class="nav-item active">
-               <a class="nav-link" href="../home/home.html">Trang chủ <span class="sr-only">(current)</span></a>
+               <a class="nav-link" href="../">Trang chủ <span class="sr-only">(current)</span></a>
             </li>
 
         
@@ -36,10 +36,10 @@
                <i class='fas fa-mail-bulk'></i>
                </a>
                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Action111</a>
-                  <a class="dropdown-item" href="#">Another action111</a>
+                  <a class="dropdown-item" href="#">Trung tâm xét nghiệm</a>
+                  <a class="dropdown-item" href="#">Khoa tai mũi họng </a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here111</a>
+                  <a class="dropdown-item" href="#">Khoa Nhi</a>
                </div>
             </li>
             <form class="form-inline my-2 my-lg-0">

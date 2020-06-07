@@ -354,3 +354,33 @@ body {
   /* text-transform: lowercase; */
   text-align: center;
 }
+/*  */
+/* lịch sử khám */
+#lichsukham .title .icon {
+  margin: 0 2px;
+  padding: 3px 5px;
+} /*  */
+
+#lichsukham .title hr {
+  width: 20%;
+  border: 1px solid #2980b9;
+  background-color: #2980b9;
+}
+#lichsukham .main .table thead th {
+  vertical-align: middle !important;
+  border-bottom: 2px solid #dee2e6;
+  border-left: 0.5px solid rgba(1, 1, 1, 0.1);
+  border-right: 0.5px solid rgba(1, 1, 1, 0.1);
+  text-align: center;
+}
+#lichsukham .main .table td {
+  padding: 0.5rem 0.3rem !important;
+  vertical-align: middle !important;
+  border-top: 1px solid #dee2e6;
+  border-left: 0.5px solid rgba(1, 1, 1, 0.1);
+  border-right: 0.5px solid rgba(1, 1, 1, 0.1);
+  border-bottom: 0.5px solid rgba(1, 1, 1, 0.1);
+  /* text-transform: lowercase; */
+  text-align: center;
+}
+/*  */
